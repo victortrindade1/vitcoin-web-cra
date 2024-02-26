@@ -12,8 +12,8 @@ import AuthLayout from "pages/_layouts/auth";
 import DefaultLayout from "pages/_layouts/default";
 import LoadingPage from "pages/LoadingPage";
 
-// import { useAppSelector } from "hooks";
-// import api from "services/api";
+import { useAppSelector } from "hooks";
+import api from "services/api";
 
 const Dashboard = lazy(() => import("pages/Dashboard"));
 const ConfigPage = lazy(() => import("pages/ConfigPage"));
@@ -21,22 +21,21 @@ const Login = lazy(() => import("pages/Login"));
 const User = lazy(() => import("pages/User"));
 
 export default function MyRoutes() {
-  // const signed = useAppSelector((state) => state.auth.signed);
-  const signed = false; // TEMPORÁRIO
-  // const token = useAppSelector((state) => state.auth.user?.token);
-  // const status = useAppSelector((state) => state.auth.status);
+  const signed = useAppSelector((state) => state.auth.signed);
+  const token = useAppSelector((state) => state.auth.user?.token);
+  const status = useAppSelector((state) => state.auth.status);
 
-  // if (status === "loading") {
-  //   return <LoadingPage />;
-  // }
+  if (status === "loading") {
+    return <LoadingPage />;
+  }
 
   const PrivateWrapper = () => {
     const location = useLocation();
 
-    // // Aplica token
-    // if (token && signed) {
-    //   api.defaults.headers.Authorization = `Bearer ${token}`;
-    // }
+    // Aplica token
+    if (token && signed) {
+      api.defaults.headers.Authorization = `Bearer ${token}`;
+    }
 
     return signed ? (
       <Outlet />
