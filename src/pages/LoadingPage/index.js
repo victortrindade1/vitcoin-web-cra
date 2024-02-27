@@ -1,11 +1,11 @@
 import React from "react";
 
-import { Container } from "./styles";
+import { Container, Span } from "./styles";
 
 function LoadingPage() {
   return (
     <Container>
-      <h1>Loading Page...</h1>
+      <Span></Span>
     </Container>
   );
 }

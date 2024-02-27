@@ -1,7 +1,18 @@
 "use client";
 
 import "./fonts";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, keyframes } from "styled-components";
+const gradient = keyframes`
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+`;
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -22,9 +33,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased !important;
-    /* background-color: ${(props) => props.theme.dark} */
-    background-color: #2b4162;
-    background-image: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
+    background: linear-gradient(315deg, #2b4162 0%, #221A35 20%, #06081A 70%, #12100e 80% );
+    background-size: 400% 400%;
+	  animation: ${gradient} 15s ease infinite;
   }
 
   body, input, button {
