@@ -5,7 +5,6 @@ import React from "react";
 function DefaultLayout({ children }) {
   return (
     <>
-      <h1>Default Page</h1>
       <div>{children}</div>
     </>
   );
