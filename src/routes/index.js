@@ -15,10 +15,10 @@ import LoadingPage from "pages/LoadingPage";
 import { useAppSelector } from "hooks";
 import api from "services/api";
 
-const Dashboard = lazy(() => import("pages/Dashboard"));
-const ConfigPage = lazy(() => import("pages/ConfigPage"));
+const HomeBroker = lazy(() => import("pages/HomeBroker"));
+const Historico = lazy(() => import("pages/Historico"));
 const Login = lazy(() => import("pages/Login"));
-const User = lazy(() => import("pages/User"));
+const Home = lazy(() => import("pages/Home"));
 
 export default function MyRoutes() {
   // const signed = useAppSelector((state) => state.auth.signed);
@@ -72,34 +72,34 @@ export default function MyRoutes() {
               index
               element={
                 <Suspense fallback={<LoadingPage />}>
-                  <Dashboard />
+                  <HomeBroker />
                 </Suspense>
               }
             />
 
-            {/* DASHBOARD */}
+            {/* HomeBroker */}
             <Route
-              path="dashboard"
+              path="homebroker"
               element={
                 <Suspense fallback={<LoadingPage />}>
-                  <Dashboard />
+                  <HomeBroker />
                 </Suspense>
               }
             />
 
             <Route
-              path="configuracoes"
+              path="historico"
               element={
                 <Suspense fallback={<LoadingPage />}>
-                  <ConfigPage />
+                  <Historico />
                 </Suspense>
               }
             />
             <Route
-              path="/conta"
+              path="/home"
               element={
                 <Suspense fallback={<LoadingPage />}>
-                  <User />
+                  <Home />
                 </Suspense>
               }
             />

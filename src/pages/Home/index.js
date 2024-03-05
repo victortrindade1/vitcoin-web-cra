@@ -2,8 +2,8 @@ import React from "react";
 
 // import { Container } from './styles';
 
-function User() {
-  return <div>User Page</div>;
+function Home() {
+  return <div>Home Page</div>;
 }
 
-export default User;
+export default Home;

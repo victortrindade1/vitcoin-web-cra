@@ -12,7 +12,7 @@ import {
   CarteiraDetails,
 } from "./styles";
 
-function Dashboard() {
+function HomeBroker() {
   return (
     <Container>
       <Chart />
@@ -24,4 +24,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default HomeBroker;
