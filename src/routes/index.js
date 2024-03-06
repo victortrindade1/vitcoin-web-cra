@@ -15,7 +15,7 @@ import LoadingPage from "pages/LoadingPage";
 import { useAppSelector } from "hooks";
 import api from "services/api";
 
-const HomeBroker = lazy(() => import("pages/HomeBroker"));
+const Chart = lazy(() => import("pages/Chart"));
 const Historico = lazy(() => import("pages/Historico"));
 const Login = lazy(() => import("pages/Login"));
 const Home = lazy(() => import("pages/Home"));
@@ -72,17 +72,17 @@ export default function MyRoutes() {
               index
               element={
                 <Suspense fallback={<LoadingPage />}>
-                  <HomeBroker />
+                  <Chart />
                 </Suspense>
               }
             />
 
-            {/* HomeBroker */}
+            {/* Chart */}
             <Route
-              path="homebroker"
+              path="chart"
               element={
                 <Suspense fallback={<LoadingPage />}>
-                  <HomeBroker />
+                  <Chart />
                 </Suspense>
               }
             />

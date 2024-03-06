@@ -7,7 +7,7 @@ export const MoedaContainer = styled.div``;
 export const SelectMoeda = styled.select``;
 
 export const ChartContainer = styled.div`
-  height: 80vh;
+  height: 70vh;
   width: 100%;
   display: flex;
   justify-content: center;
