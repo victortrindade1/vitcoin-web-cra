@@ -58,17 +58,15 @@ function TradingViewChart() {
 
   return (
     <Container>
-      <ChartContainer>
-        <div
-          className="tradingview-widget-container"
-          ref={tradingViewRef}
-          style={{
-            width: "100%",
-          }}
-        >
-          <div className="tradingview-widget-container__widget"></div>
-        </div>
-      </ChartContainer>
+      <div
+        className="tradingview-widget-container"
+        ref={tradingViewRef}
+        style={{
+          width: "100%",
+        }}
+      >
+        <div className="tradingview-widget-container__widget"></div>
+      </div>
     </Container>
   );
 }
