@@ -1,11 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import {
-  Container,
-  // MoedaContainer,
-  // SelectMoeda,
-  ChartContainer,
-} from "./styles";
+import { Container } from "./styles";
 
 function TradingViewChart() {
   const [scriptAdded, setScriptAdded] = useState(false);
