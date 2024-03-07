@@ -15,8 +15,12 @@ export const Container = styled.div`
 `;
 
 export const NavLinkStyled = styled(NavLink)`
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #00b3b3,
-    0 0 0.8rem #00b3b3, 0 0 2.8rem #00b3b3, inset 0 0 1.3rem #00b3b3;
+  /* box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #00b3b3,
+    0 0 0.8rem #00b3b3, 0 0 2.8rem #00b3b3, inset 0 0 1.3rem #00b3b3; */
+
+  box-shadow: 0 0 0.01rem #fff, 0 0 0.01rem #fff, 0 0 0.01rem #00b3b3,
+    0 0 0.1rem #00b3b3, 0 0 1rem #00b3b3, inset 0 0 0.1rem #00b3b3;
+
   width: 32vw;
   display: flex;
   justify-content: center;
