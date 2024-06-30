@@ -4,13 +4,13 @@ import "./fonts";
 import { createGlobalStyle, keyframes } from "styled-components";
 const gradient = keyframes`
 	0% {
-		background-position: 0% 50%;
+		background-position: 0%;
 	}
 	50% {
-		background-position: 100% 50%;
+		/* background-position: 100%; */
 	}
 	100% {
-		background-position: 0% 50%;
+		background-position: 100%;
 	}
 `;
 
@@ -33,9 +33,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     -webkit-font-smoothing: antialiased !important;
-    background: linear-gradient(315deg, #2b4162 0%, #221A35 20%, #06081A 70%, #12100e 80% );
-    background-size: 400% 400%;
-	  animation: ${gradient} 15s ease infinite;
+    background: linear-gradient(315deg, #0a0810ff 0%, #0f0c18 10%, #1a1528ff 30%, #352852 50%, #1a1528ff 70%, #0f0c18 90%, #0a0810 100% );
+    background-size: 2000% 2000%;
+	  animation: ${gradient} 15s linear infinite;
   }
 
   body, input, button {

@@ -21,8 +21,8 @@ const Login = lazy(() => import("pages/Login"));
 const Home = lazy(() => import("pages/Home"));
 
 export default function MyRoutes() {
-  // const signed = useAppSelector((state) => state.auth.signed);
-  const signed = true;
+  const signed = useAppSelector((state) => state.auth.signed);
+  // const signed = true;
 
   const token = useAppSelector((state) => state.auth.user?.token);
   const status = useAppSelector((state) => state.auth.status);

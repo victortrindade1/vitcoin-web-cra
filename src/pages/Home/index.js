@@ -1,9 +1,22 @@
 import React from "react";
 
-// import { Container } from './styles';
+// import api from "services/api";
+
+import SwitchInput from "components/SwitchInput";
+
+import { Container } from "./styles";
 
 function Home() {
-  return <div>Home Page</div>;
+  return (
+    <Container>
+      <SwitchInput label={"Servidor"} key={"switchServidor"} />
+
+      {/* <CarteiraContainer>
+
+      <Label></Label>
+    </CarteiraContainer> */}
+    </Container>
+  );
 }
 
 export default Home;
