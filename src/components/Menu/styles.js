@@ -29,6 +29,7 @@ export const NavLinkStyled = styled(NavLink)`
   position: relative;
   background-color: #00000080;
   transition: background-color 2s;
+  border-radius: 50px;
 
   &:hover::before {
     content: "";
@@ -38,6 +39,7 @@ export const NavLinkStyled = styled(NavLink)`
     width: 32vw;
     height: 10.5vh;
     background-color: #ffffff20;
+    border-radius: 50px;
     cursor: pointer;
   }
 

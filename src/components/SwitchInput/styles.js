@@ -4,13 +4,13 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
 
-  font-size: 25px;
+  font-size: 16px;
 
   .switch {
     position: relative;
     display: inline-block;
     width: 60px;
-    height: 34px;
+    height: 15px;
 
     margin-right: 10px;
   }
@@ -36,11 +36,11 @@ export const Container = styled.div`
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: black;
+    height: 13px;
+    width: 30px;
+    left: 1px;
+    bottom: 1px;
+    background-color: ${(props) => (props.checked ? "#44d244" : "#ff003f")};
     -webkit-transition: 0.4s;
     transition: 0.4s;
   }
@@ -54,17 +54,17 @@ export const Container = styled.div`
   }
 
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(28px);
+    -ms-transform: translateX(28px);
+    transform: translateX(28px);
   }
 
   /* Rounded sliders */
   .slider.round {
-    border-radius: 34px;
+    border-radius: 15px;
   }
 
   .slider.round:before {
-    border-radius: 50%;
+    border-radius: 15px;
   }
 `;

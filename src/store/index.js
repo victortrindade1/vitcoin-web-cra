@@ -4,11 +4,11 @@ import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 
 import authReducer from "./slices/auth";
-import serverConfigReducer from "./slices/serverConfig";
+// import serverConfigReducer from "./slices/serverConfig";
 
 const reducers = combineReducers({
   auth: authReducer,
-  serverConfig: serverConfigReducer,
+  // serverConfig: serverConfigReducer,
 });
 
 const persistConfig = {

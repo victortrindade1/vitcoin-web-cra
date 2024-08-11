@@ -2,14 +2,14 @@ import React from "react";
 
 import { Container } from "./styles";
 
-function SwitchInput({ checked, label, key }) {
+function SwitchInput({ checked, label, name, isLoading, onChange }) {
   return (
-    <Container key={key}>
-      <label class="switch">
-        <input type="checkbox" checked={checked} />
-        <span class="slider round"></span>
+    <Container name={name} checked={checked}>
+      <label className="switch">
+        <input type="checkbox" checked={checked} onChange={onChange} />
+        <span className="slider round"></span>
       </label>
-      {label}
+      {!isLoading ? label : "Carregando..."}
     </Container>
   );
 }

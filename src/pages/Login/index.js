@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useAppDispatch } from "hooks";
 
 import { signIn } from "store/slices/auth";
-import { verifyServerIsOn } from "store/slices/serverConfig";
+// import { verifyServerIsOn } from "store/slices/serverConfig";
 
 import durinDoor from "assets/svg/durindoor-minified.svg";
 
@@ -37,7 +37,7 @@ function Login() {
   const onSubmit = useCallback(
     async (data) => {
       await dispatch(signIn(data));
-      await dispatch(verifyServerIsOn());
+      // await dispatch(verifyServerIsOn());
     },
     [dispatch]
   );
